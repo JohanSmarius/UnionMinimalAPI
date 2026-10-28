@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="CustomerIdRequired" xml:space="preserve"><value>Customer ID is required.</value></data>
+  <data name="ProductIdRequired" xml:space="preserve"><value>Product ID is required.</value></data>
+  <data name="QuantityOutOfRange" xml:space="preserve"><value>Quantity must be between 1 and 10.</value></data>
+  <data name="PaymentTokenRequired" xml:space="preserve"><value>Payment token is required.</value></data>
+  <data name="CustomerNotActive" xml:space="preserve"><value>The customer does not exist or is inactive.</value></data>
+  <data name="CouponInvalid" xml:space="preserve"><value>The coupon code is invalid.</value></data>
+  <data name="ProductNotFound" xml:space="preserve"><value>Product '{0}' was not found.</value></data>
+  <data name="OutOfStock" xml:space="preserve"><value>Product '{0}' has only {1} unit(s) in stock.</value></data>
+  <data name="PaymentDeclined" xml:space="preserve"><value>The payment was declined.</value></data>
+</root>

@@ -1,0 +1,86 @@
+@host = http://localhost:5055
+
+### Successful order (201)
+POST {{host}}/orders
+Content-Type: application/json
+Accept-Language: en-US
+
+{
+  "customerId": "customer-1",
+  "productId": "keyboard",
+  "quantity": 2,
+  "paymentToken": "approve",
+  "couponCode": "SAVE10"
+}
+
+### Out of stock, translated to Dutch (409)
+POST {{host}}/orders?culture=nl-NL
+Content-Type: application/json
+
+{
+  "customerId": "customer-1",
+  "productId": "keyboard",
+  "quantity": 8,
+  "paymentToken": "approve"
+}
+
+### Payment declined, translated to English (400)
+POST {{host}}/orders
+Content-Type: application/json
+Accept-Language: en-US
+
+{
+  "customerId": "customer-1",
+  "productId": "mouse",
+  "quantity": 1,
+  "paymentToken": "decline"
+}
+
+### Asynchronous customer validation, translated to Dutch (400)
+POST {{host}}/orders
+Content-Type: application/json
+Accept-Language: nl-NL
+
+{
+  "customerId": "unknown-customer",
+  "productId": "keyboard",
+  "quantity": 2,
+  "paymentToken": "approve"
+}
+
+### Two asynchronous validation errors in one request (400)
+POST {{host}}/orders?culture=en-US
+Content-Type: application/json
+
+{
+  "customerId": "unknown-customer",
+  "productId": "keyboard",
+  "quantity": 2,
+  "paymentToken": "approve",
+  "couponCode": "NOT-A-COUPON"
+}
+
+### Attribute validation, translated to Dutch (400)
+POST {{host}}/orders?culture=nl-NL
+Content-Type: application/json
+
+{
+  "customerId": "",
+  "productId": "keyboard",
+  "quantity": 0,
+  "paymentToken": "approve"
+}
+
+### Product not found (404)
+POST {{host}}/orders?culture=nl-NL
+Content-Type: application/json
+
+{
+  "customerId": "customer-1",
+  "productId": "does-not-exist",
+  "quantity": 1,
+  "paymentToken": "approve"
+}
+
+### Look up a created order: replace the GUID with the returned id
+GET {{host}}/orders/00000000-0000-0000-0000-000000000000

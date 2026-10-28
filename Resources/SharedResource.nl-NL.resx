@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="CustomerIdRequired" xml:space="preserve"><value>Klantnummer is verplicht.</value></data>
+  <data name="ProductIdRequired" xml:space="preserve"><value>Productnummer is verplicht.</value></data>
+  <data name="QuantityOutOfRange" xml:space="preserve"><value>Aantal moet tussen 1 en 10 liggen.</value></data>
+  <data name="PaymentTokenRequired" xml:space="preserve"><value>Betaaltoken is verplicht.</value></data>
+  <data name="CustomerNotActive" xml:space="preserve"><value>De klant bestaat niet of is niet actief.</value></data>
+  <data name="CouponInvalid" xml:space="preserve"><value>De kortingscode is ongeldig.</value></data>
+  <data name="ProductNotFound" xml:space="preserve"><value>Product '{0}' is niet gevonden.</value></data>
+  <data name="OutOfStock" xml:space="preserve"><value>Er zijn slechts {1} exemplaren van product '{0}' op voorraad.</value></data>
+  <data name="PaymentDeclined" xml:space="preserve"><value>De betaling is geweigerd.</value></data>
+</root>
