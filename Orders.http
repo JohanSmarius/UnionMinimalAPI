@@ -1,4 +1,4 @@
-@host = http://localhost:5055
+@host = http://localhost:54011
 
 ### Successful order (201)
 POST {{host}}/orders
