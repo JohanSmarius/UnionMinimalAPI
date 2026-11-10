@@ -6,6 +6,7 @@
     <RootNamespace>UnionOrders.Api</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="11.0.0-rc.3.26522.148" />
     <PackageReference Include="Microsoft.Extensions.Validation" Version="11.0.0-rc.2.26504.105" />
   </ItemGroup>
 </Project>

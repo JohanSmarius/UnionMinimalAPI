@@ -84,3 +84,7 @@ Content-Type: application/json
 
 ### Look up a created order: replace the GUID with the returned id
 GET {{host}}/orders/00000000-0000-0000-0000-000000000000
+
+
+### OpenAPI
+GET {{host}}/openapi/v1.json

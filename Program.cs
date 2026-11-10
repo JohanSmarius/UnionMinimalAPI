@@ -15,6 +15,8 @@ builder.Services.AddValidation(options =>
     options.LocalizerProvider = (_, factory) => factory.Create(typeof(SharedResource));
 });
 
+builder.Services.AddOpenApi();
+
 builder.Services.AddSingleton<ICustomerDirectory, DemoCustomerDirectory>();
 builder.Services.AddSingleton<ICouponCatalog, DemoCouponCatalog>();
 builder.Services.AddSingleton<IProductCatalog, DemoProductCatalog>();
@@ -57,5 +59,10 @@ app.MapGet("/orders/{id:guid}", (Guid id, OrderStore orders) =>
     orders.Find(id) is { } order
         ? Results.Ok(order)
         : Results.NotFound());
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+}
 
 app.Run();
